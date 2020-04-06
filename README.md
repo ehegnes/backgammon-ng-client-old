@@ -1,34 +1,19 @@
 # backgammon-ng-client
 
-## Project setup
+## Setup
+Prefer `pnpm` over `yarn` or `npm`.
+
 ```
-pnpm install
+pnpm i
 ```
 
-### Compiles and hot-reloads for development
-```
-pnpm run serve
-```
+## Targets
+Targets may be run with `pnpm run <target>`.
 
-### Compiles and minifies for production
-```
-pnpm run build
-```
-
-### Run your unit tests
-```
-pnpm run test:unit
-```
-
-### Run your end-to-end tests
-```
-pnpm run test:e2e
-```
-
-### Lints and fixes files
-```
-pnpm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+| Target            | Description                              |
+| ----------------- | ---------------------------------------- |
+| `serve`           | Compiles and hot-reloads for development |
+| `build`           | Compiles minifies for production         |
+| `test:unit`       | Runs unit tests                          |
+| `test:e2e`        | Runs end-to-end tests                    |
+| `lint`            | Lints and fixes code                     |

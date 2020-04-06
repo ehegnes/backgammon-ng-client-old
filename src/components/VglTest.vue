@@ -33,17 +33,27 @@
               :size="vglOptions.axesSize"
             />
             <!--<vgl-obj-loader src="/seahorse.obj" />-->
-            <vgl-box-geometry name="box" />
+            <vgl-box-geometry
+              name="box"
+              :width="boxSize"
+              :height="boxSize"
+              :depth="boxSize"
+            />
+            <vgl-mesh-standard-material name="mesh" />
+            <vgl-mesh
+              geometry="box"
+              material="mesh"
+            />
             <vgl-ambient-light intensity="0.5" />
             <vgl-directional-light
-              position="1 1 1"
+              position="1.5 2 1"
               intensity="0.5"
             />
           </vgl-scene>
           <vgl-perspective-camera
             name="camera"
-            orbit-position="300 1 0.2"
-            orbit-target="0 0 -300"
+            orbit-position="40 1 0.4"
+            orbit-target="0 0 0"
           />
         </vgl-renderer>
       </v-col>
@@ -65,6 +75,7 @@ export default {
   data: () => ({
     board: null,
     loading: true,
+    boxSize: 10,
     vglOptions: {},
   }),
   mounted () {

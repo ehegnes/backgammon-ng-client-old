@@ -66,6 +66,8 @@
       <v-slider
         v-if="value.axesHelper"
         v-model="value.axesSize"
+        :max="maxAxesSize"
+        :min="minAxesSize"
         label="Axes Size"
         thumb-label
       />
@@ -78,9 +80,9 @@
 const value = {
   cameraHelper: false,
   axesHelper: true,
-  axesSize: 1,
+  axesSize: 100,
   antialias: true,
-  backgroundColor: '#000',
+  backgroundColor: '#292D3E',
   alpha: false,
   premultipliedAlpha: true,
   depth: true,
@@ -94,6 +96,8 @@ export default {
   data: () => ({
     value,
     precisionItems: ['highp', 'mediump', 'lowp'],
+    maxAxesSize: 800,
+    minAxesSize: 10,
   }),
   watch: {
     value: {
